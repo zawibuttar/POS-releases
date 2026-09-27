@@ -4,7 +4,7 @@ This guide is for the shop owner and the cashiers. It covers installing the app,
 
 ## 1. Install
 
-1. Open https://github.com/zawibuttar/POS/releases on the shop computer.
+1. Open https://github.com/zawibuttar/POS-releases/releases on the shop computer.
 2. Download `POS-<version>-setup.exe` (Windows) or `POS-<version>.dmg` (Mac) from the latest release.
 3. Run it. On Windows choose the install folder if you like, then finish. A **POS** shortcut appears on the desktop.
 
@@ -52,17 +52,19 @@ Press **F9** or "Pay".
 - **Credit**: adds the amount to the customer's balance. If the sale would take the customer over their credit limit, the dialog asks for the admin PIN before it can be completed.
 - **Split**: any mix of cash, card and credit.
 
-"Complete and print" saves the sale and prints the receipt. "Complete without printing" saves only. Every sale is written to `pos-data.xlsx` before the success screen appears.
+The **Order note** box at the bottom of the dialog is optional and prints on the receipt and on the kitchen slip, for example "less spices" or "no ice".
+
+"Complete and print" saves the sale and prints on every enabled printer (see section 11). "Complete without printing" saves only. Every sale is written to `pos-data.xlsx` before the success screen appears.
 
 ![Sale completed](screenshots/14-sale-success.png)
 
-Press **Enter** for the next sale, or reprint the receipt.
+The success screen also has an **Order note** box: type or change the note there and it is saved when you leave the box, then **Print receipt** prints it. Press **Enter** for the next sale.
 
 ## 6. Sales history and refunds
 
 ![Sales](screenshots/15-sales.png)
 
-The Sales screen lists every sale with a search box, date range and status filter. Select a sale to see the items, payments and a receipt preview, and to reprint it.
+The Sales screen lists every sale with a search box, date range and status filter. Select a sale to see the items, payments and a receipt preview. **Reprint** prints the customer receipt again on the receipt printers only, so the kitchen does not get a second order; **Kitchen slip** sends the order slip to the kitchen printers again when a ticket is lost.
 
 **Refunds** are behind the admin PIN. Choose the items and quantities to refund, whether to put them back in stock, and how the money goes back (cash, card or customer credit). The amount is each item's share of what the customer actually paid, so discounts and tax are handled for you. Cash or card can only be refunded up to the cash or card received for that sale; the part that was put on credit goes back to the customer's credit, which the dialog selects by default for credit sales. Sales in an archived year (section 13) can be viewed and reprinted but not refunded.
 
@@ -118,7 +120,9 @@ Shop name, phone, address, currency, tax rate, cash rounding, low-stock default 
 
 ![Receipt settings](screenshots/16-settings-receipt.png)
 
-Paper width (58 or 80 mm), header and footer lines, whether to show the cashier and barcode, which printer to use and a test print. The preview updates as you type.
+**Printers**: a list of printers, up to six. For each one choose the device, what it prints (a **Customer receipt** with prices, or a **Kitchen order slip** with only the items, quantities, order number and note in large type), the paper width (58 or 80 mm) and how many copies. Every sale prints on all of them; if one printer fails the others still print and the message names the one that failed. **Test print** sends a sample to each printer.
+
+Below the list: header and footer lines and whether to print automatically after each sale. The preview updates when you save.
 
 ### Users and PINs
 
