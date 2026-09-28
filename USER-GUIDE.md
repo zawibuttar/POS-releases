@@ -120,7 +120,7 @@ Shop name, phone, address, currency, tax rate, cash rounding, low-stock default 
 
 ![Receipt settings](screenshots/16-settings-receipt.png)
 
-**Printers**: a list of printers, up to six. For each one choose the device, what it prints (a **Customer receipt** with prices, or a **Kitchen order slip** with only the items, quantities, order number and note in large type), the paper width (58 or 80 mm) and how many copies. Every sale prints on all of them; if one printer fails the others still print and the message names the one that failed. **Test print** sends a sample to each printer.
+**Printers**: a list of printers, up to six. For each one choose the device, what it prints (a **Customer receipt** with prices, or a **Kitchen order slip** with only the items, quantities, order number and note in large type), the method, the paper width (58 or 80 mm) and how many copies. Leave the method on **Direct (thermal)** for receipt printers: the app then talks to the printer in its own language, so columns, bold text and the cut come out right whichever driver Windows or macOS installed for it, including the plain "Generic / Text Only" driver. Choose **Through the driver** only for an ordinary office printer. Every sale prints on all of them; if one printer fails the others still print and the message names the one that failed. **Test print** sends a sample to each printer.
 
 Below the list: header and footer lines and whether to print automatically after each sale. The preview updates when you save.
 
@@ -192,8 +192,12 @@ Everything lives in one Excel workbook, `pos-data.xlsx`, in the data folder chos
 Google backup mirrors every sheet to a Google Spreadsheet as soon as the computer is online, and copies the workbook to Google Drive every night (keeping the last seven). The Google sign-in only asks for permission to files the app creates itself, plus your email address. Drive copies are named with the shop name and a short code for this computer, so two terminals on one Google account keep separate copies.
 
 1. In Settings › Google backup press **Connect Google** and sign in with the shop's Google account in the browser that opens.
-2. The app creates a spreadsheet named after the shop. "Open spreadsheet" shows it.
+2. The app creates a spreadsheet named after the shop. "Open in Google Sheets" shows it.
 3. The **sync pill** in the top bar tells you the state: local only, offline with N waiting, syncing, online and synced, or reconnect needed.
+
+**Reading the spreadsheet from anywhere.** Open it in the Google Sheets app on a phone or in any browser. The first tab, **Overview**, is a dashboard: today, yesterday, this week and this month at the top, a chart of the last 30 days, then the top products, a this-month summary (revenue, refunds, cost of goods, gross profit, expenses, net), payments by method, who sold what today, low stock, credit customers and when the last backups ran. The next tabs are readable lists: **Daily sales** (one row per day, newest first, with cash/card/credit split and expenses), **Recent sales** (the last 300 sales with cashier, customer, total, payment method and note), **Top products** (this month, last 30 days and all time), **Stock check** (Out and Low flagged in colour) and **Credit customers** (who owes what). Times are shown in the shop's time zone and amounts in the shop's currency. These tabs are refreshed a moment after each sale, at most once a minute, and again when the day changes.
+
+The grey tabs after them (Categories, Products, Sales, and so on) hold the raw data the app restores from. Settings and Users are hidden (View › Hidden sheets shows them). Do not edit the grey tabs; a rebuild from the app overwrites them.
 
 ![Sync panel](screenshots/50-sync-panel.png)
 
