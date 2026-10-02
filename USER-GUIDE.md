@@ -76,7 +76,7 @@ The Sales screen lists every sale with a search box, date range and status filte
 
 Admins add and edit products: name, barcode, SKU, category, cost, sale price, tax, unit, opening stock and low-stock level. The margin is shown as you type. Products can be marked inactive instead of deleted, so old sales keep their history.
 
-**Import from Excel or CSV**: "Import" opens a preview that maps columns, shows problems per row and creates or updates products in one go. Use "Download template" for the expected columns.
+**Import from Excel or CSV**: "Import" opens a preview that maps columns, shows problems per row and creates or updates products in one go. Use "Download template" for the expected columns. Only name and sale_price are required. For a restaurant menu add a `track_stock` column with `no`, so dishes and deals sell without a stock count; leave it out or write `yes` for goods you count.
 
 ![Import](screenshots/20-import-dialog.png)
 
