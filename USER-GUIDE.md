@@ -16,7 +16,7 @@ The first time the app opens it asks four things.
 
 ![Setup: shop details](screenshots/01-setup-shop.png)
 
-1. **Shop details**: name, phone and address. These print on receipts and can be changed later in Settings.
+1. **Shop details**: name, phone, address and the **logo letters**. The letters (up to three, suggested from the shop name, for example JZ for Jenzy Lounge) are printed in a round badge with a chef hat at the top of every receipt; the preview next to the box shows it. Everything here can be changed later in Settings.
 2. **Admin account**: your name and a 4-digit PIN. The admin PIN protects refunds, settings and data tools. Keep it private.
 3. **Data folder**: where `pos-data.xlsx` lives. Keep the default, which is on this computer. Do not put it on a network drive or a folder synced by another tool.
 4. **Google backup**: skip for now, you can connect it later in Settings.
@@ -114,7 +114,7 @@ Settings are for admins only.
 
 ![Shop settings](screenshots/08-settings-shop.png)
 
-Shop name, phone, address, currency, tax rate, cash rounding, low-stock default and whether selling below zero stock is allowed.
+Shop name, logo letters (the receipt badge, with a preview; leave empty for no logo), phone, address, currency, tax rate, cash rounding, low-stock default and whether selling below zero stock is allowed.
 
 ### Receipt and printer
 
@@ -222,6 +222,8 @@ The installed app checks GitHub for a new version shortly after starting and eve
 | Digits and Enter | Login          | Type the PIN                |
 
 ## 17. If something goes wrong
+
+**Nothing prints on a Mac, or the Printers window shows the printer paused.** macOS pauses a printer after a failed send ("Unable to send data to printer"), for example when it was off or out of paper. The app's print message now says "paused by macOS" with the steps: check the printer is on with paper loaded, then open System Settings, Printers & Scanners, the printer, Open Print Queue and press Resume. Old jobs listed there can be deleted; receipts already printed are not sent again.
 
 - **"POS is already open" at startup** but no other window is open: the previous run did not close cleanly. Choose **Open anyway**. If another computer really has the file open, choose Quit and close it there first.
 
