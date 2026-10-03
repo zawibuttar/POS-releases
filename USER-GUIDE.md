@@ -38,7 +38,8 @@ The app returns to this screen on its own after a period of no activity (10 minu
 - **Cart**: tap a line to select it, use plus and minus to change the quantity, or the cross to remove it. The cart shows subtotal, discount, tax and total.
 - **Customer**: press **F2** or "Change" to attach a customer. Needed for credit sales.
 - **Discount**: press **F4** to give a percentage or amount off the whole sale.
-- **Hold**: press **F3** to park the sale and serve someone else. Held sales survive a restart. "Held (n)" opens the list to resume one. A resumed sale uses today's prices, and any item that is no longer for sale is left out with a message.
+- **Hold**: press **F3** to park the sale and serve someone else. Held sales survive a restart. "Open orders (n)" opens the list to resume one. A resumed sale uses today's prices, and any item that is no longer for sale is left out with a message.
+- **Order first, pay later** (cafés and restaurants): enter the order and press **Send to kitchen (F6)**. Type a table number or name if you want one, and a note for the kitchen. The kitchen slip prints with an order number that starts from 1 each day, and the order stays under "Open orders" without payment. If the customer adds something, open the order, add it and press F6 again: only the new items print, marked ADD-ON under the same number. When the customer pays, open the order and press **F9**; only the receipt prints, with the order number and table on it. Nothing counts as a sale and no stock moves until payment. With no kitchen printer set up, the slip prints on the receipt printer. Discarding an open order from the register leaves it open; use Discard in the Open orders list to cancel it. The Z-report lists orders that are still open and unpaid.
 - **Discard** empties the cart.
 
 ## 5. Taking payment
@@ -209,17 +210,18 @@ The installed app checks GitHub for a new version shortly after starting and eve
 
 ## 16. Keyboard shortcuts
 
-| Key              | Where          | Action                      |
-| ---------------- | -------------- | --------------------------- |
-| F1               | Register       | Focus search / scan box     |
-| F2               | Register       | Choose customer             |
-| F3               | Register       | Hold sale / show held sales |
-| F4               | Register       | Discount                    |
-| F9               | Register       | Pay                         |
-| Enter            | Pay dialog     | Complete and print          |
-| Enter            | Success screen | New sale                    |
-| Escape           | Any dialog     | Close                       |
-| Digits and Enter | Login          | Type the PIN                |
+| Key              | Where          | Action                        |
+| ---------------- | -------------- | ----------------------------- |
+| F1               | Register       | Focus search / scan box       |
+| F2               | Register       | Choose customer               |
+| F3               | Register       | Hold sale / show open orders  |
+| F6               | Register       | Send the order to the kitchen |
+| F4               | Register       | Discount                      |
+| F9               | Register       | Pay                           |
+| Enter            | Pay dialog     | Complete and print            |
+| Enter            | Success screen | New sale                      |
+| Escape           | Any dialog     | Close                         |
+| Digits and Enter | Login          | Type the PIN                  |
 
 ## 17. If something goes wrong
 
