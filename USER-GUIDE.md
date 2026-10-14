@@ -40,6 +40,8 @@ The app returns to this screen on its own after a period of no activity (10 minu
 - **Discount**: press **F4** to give a percentage or amount off the whole sale.
 - **Hold**: press **F3** to park the sale and serve someone else. Held sales survive a restart. "Open orders (n)" opens the list to resume one. A resumed sale uses today's prices, and any item that is no longer for sale is left out with a message.
 - **Order first, pay later** (cafés and restaurants): enter the order and press **Send to kitchen (F6)**. Type a table number or name if you want one, and a note for the kitchen. The kitchen slip prints with an order number that starts from 1 each day, and the order stays under "Open orders" without payment. If the customer adds something, open the order, add it and press F6 again: only the new items print, marked ADD-ON under the same number. When the customer pays, open the order and press **F9**; only the receipt prints, with the order number and table on it. Nothing counts as a sale and no stock moves until payment. With no kitchen printer set up, the slip prints on the receipt printer. Discarding an open order from the register leaves it open; use Discard in the Open orders list to cancel it. The Z-report lists orders that are still open and unpaid.
+- **Waiter**: every sale carries a waiter. The cart header has a Waiter box that starts on **Other**; pick the waiter who took the order, or leave Other and type a name if you like. The same box is in the Send to kitchen dialog. The waiter prints on the kitchen slip, the bill and the receipt, shows in the Open orders list and in Sales history, and has its own report tab and Z-report block. Waiters are added in Settings › Users and PINs with the role Waiter; they have no PIN and never appear on the login screen.
+- **Bill before payment**: when a table asks for the bill, open **Open orders** and press **Print bill** on that order, or press **F7** while the order is on screen. A bill prints on the receipt printer with the order number, table, items and total, marked AWAITING PAYMENT, so the waiter can take it to the table. The order stays open and the list shows "Bill printed" with the time. When the money comes back, press **Pay** on that order, choose how the customer paid, and complete the sale; the receipt prints then if you want one. **Bill again** reprints the bill.
 - **Discard** empties the cart.
 
 ## 5. Taking payment
@@ -50,6 +52,7 @@ Press **F9** or "Pay".
 
 - **Cash**: type the cash received, or tap a quick amount. The change is shown large.
 - **Card**: optionally note the last digits or a reference.
+- **Online**: for JazzCash, Easypaisa or a bank transfer. Check the transfer on the phone or bank app, then note the transaction id or the sender's name. Online money is listed apart from cash on the Z-report and in reports, so the drawer count stays right.
 - **Credit**: adds the amount to the customer's balance. If the sale would take the customer over their credit limit, the dialog asks for the admin PIN before it can be completed.
 - **Split**: any mix of cash, card and credit.
 
@@ -91,13 +94,13 @@ Record purchases, adjust counts and see the low-stock list. Every change, includ
 
 ![Customers](screenshots/24-customers.png)
 
-Add customers with a phone number and an optional credit limit. Only an admin can set or change the limit; cashiers can add customers, attach them to sales and receive payments. The customer page shows the balance, credit sales and payments. "Receive credit payment" records money paid against the balance.
+Add customers with a phone number and an optional credit limit. Only an admin can set or change the limit; cashiers can add customers, attach them to sales and receive payments. The customer page shows the balance, credit sales and payments. Click any sale in the Activity list to see what was bought, with quantities and line totals. "Receive credit payment" records money paid against the balance.
 
 ## 10. Reports
 
 ![Reports](screenshots/30-reports-summary.png)
 
-Admins see revenue, profit, refunds, average ticket, top products and payment mix for any date range. Tabs break the range down by product, category, cashier, payment method, hour and day. Any table can be exported to Excel.
+Admins see revenue, profit, refunds, average ticket, top products and payment mix for any date range. Tabs break the range down by product, category, cashier, waiter, payment method, hour and day. Any table can be exported to Excel.
 
 **Expenses** are recorded here too and give the "net after expenses" figure.
 
@@ -129,7 +132,7 @@ Below the list: header and footer lines and whether to print automatically after
 
 ![Users](screenshots/26-settings-users.png)
 
-Add cashiers, set roles, reset PINs and deactivate people who leave. Cashiers cannot open Products, Inventory, Reports or Settings. The inactivity lock time is set here. A user shown as **No PIN** (for example after restoring a backup on a new computer) cannot sign in until you reset their PIN.
+Add cashiers and waiters, set roles, reset PINs and deactivate people who leave. A **Waiter** (order taker) has no PIN and cannot sign in; the cashier picks them on each sale. Cashiers cannot open Products, Inventory, Reports or Settings. The inactivity lock time is set here. A user shown as **No PIN** (for example after restoring a backup on a new computer) cannot sign in until you reset their PIN.
 
 ### Data file and backups
 
