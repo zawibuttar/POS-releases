@@ -40,7 +40,7 @@ The app returns to this screen on its own after a period of no activity (10 minu
 - **Discount**: press **F4** to give a percentage or amount off the whole sale.
 - **Hold**: press **F3** to park the sale and serve someone else. Held sales survive a restart. "Open orders (n)" opens the list to resume one. A resumed sale uses today's prices, and any item that is no longer for sale is left out with a message.
 - **Order first, pay later** (cafés and restaurants): enter the order and press **Send to kitchen (F6)**. Type a table number or name if you want one, and a note for the kitchen. The kitchen slip prints with an order number that starts from 1 each day, and the order stays under "Open orders" without payment. If the customer adds something, open the order, add it and press F6 again: only the new items print, marked ADD-ON under the same number. When the customer pays, open the order and press **F9**; only the receipt prints, with the order number and table on it. Nothing counts as a sale and no stock moves until payment. With no kitchen printer set up, the slip prints on the receipt printer. Discarding an open order from the register leaves it open; use Discard in the Open orders list to cancel it. The Z-report lists orders that are still open and unpaid.
-- **Waiter**: every sale carries a waiter. The cart header has a Waiter box that starts on **Other**; pick the waiter who took the order, or leave Other and type a name if you like. The same box is in the Send to kitchen dialog. The waiter prints on the kitchen slip, the bill and the receipt, shows in the Open orders list and in Sales history, and has its own report tab and Z-report block. Waiters are added in Settings › Users and PINs with the role Waiter; they have no PIN and never appear on the login screen.
+- **Order taker**: every sale carries an order taker. The cart header has an Order taker box that starts on **Other**; pick the person who took the order, or leave Other and type a name if you like. The same box is in the Send to kitchen dialog. The order taker prints on the kitchen slip, the bill and the receipt, shows in the Open orders list and in Sales history, and has its own report tab and Z-report block. Order takers are added in Settings › Users and PINs with the role Order taker; they have no PIN and never appear on the login screen.
 - **Bill before payment**: when a table asks for the bill, open **Open orders** and press **Print bill** on that order, or press **F7** while the order is on screen. A bill prints on the receipt printer with the order number, table, items and total, marked AWAITING PAYMENT, so the waiter can take it to the table. The order stays open and the list shows "Bill printed" with the time. When the money comes back, press **Pay** on that order, choose how the customer paid, and complete the sale; the receipt prints then if you want one. **Bill again** reprints the bill.
 - **Discard** empties the cart.
 
@@ -100,7 +100,7 @@ Add customers with a phone number and an optional credit limit. Only an admin ca
 
 ![Reports](screenshots/30-reports-summary.png)
 
-Admins see revenue, profit, refunds, average ticket, top products and payment mix for any date range. Tabs break the range down by product, category, cashier, waiter, payment method, hour and day. Any table can be exported to Excel.
+Admins see revenue, profit, refunds, average ticket, top products and payment mix for any date range. Tabs break the range down by product, category, cashier, order taker, payment method, hour and day. Any table can be exported to Excel.
 
 **Expenses** are recorded here too and give the "net after expenses" figure.
 
@@ -132,7 +132,7 @@ Below the list: header and footer lines and whether to print automatically after
 
 ![Users](screenshots/26-settings-users.png)
 
-Add cashiers and waiters, set roles, reset PINs and deactivate people who leave. A **Waiter** (order taker) has no PIN and cannot sign in; the cashier picks them on each sale. Cashiers cannot open Products, Inventory, Reports or Settings. The inactivity lock time is set here. A user shown as **No PIN** (for example after restoring a backup on a new computer) cannot sign in until you reset their PIN.
+Add cashiers, order takers and other staff, set roles, job titles and monthly salaries, reset PINs and deactivate people who leave. An **Order taker** has no PIN and cannot sign in; the cashier picks them on each sale. **Staff (no login)** is for the chef, dishwasher and anyone else paid through the Staff page (section 15). Cashiers cannot open Products, Inventory, Reports or Settings. The inactivity lock time is set here. A user shown as **No PIN** (for example after restoring a backup on a new computer) cannot sign in until you reset their PIN.
 
 ### Data file and backups
 
@@ -207,11 +207,22 @@ The grey tabs after them (Categories, Products, Sales, and so on) hold the raw d
 
 **Restore from Google** (new computer or lost file): connect the same Google account, then choose "Restore from Google Sheets" or a Drive copy. Always run the preview first; it shows how many rows are valid and refuses to restore an empty spreadsheet. The restore uses exactly the rows you previewed (within ten minutes), asks for the admin PIN, backs up the current file and replaces it. Staff other than the admin who restored will show as **No PIN** afterwards; reset their PINs in Settings › Users and PINs.
 
-## 15. Updates
+## 15. Staff, advances and salaries
+
+The **Staff** page (admins only) keeps track of what each person is paid.
+
+1. **Add people** in Settings › Users and PINs. Every user can have a job title and a monthly salary. People who never touch the computer, such as the chef or the dishwasher, get the role **Staff (no login)**; they have no PIN and never appear on the login screen.
+2. **Give an advance** whenever someone takes money before pay day: on the Staff page press **Give advance**, or open the user menu at the top right and choose **Give staff advance** (any signed-in user can do this). Pick the person, type the amount, say whether it came from the cash drawer or the owner's pocket, add a note if you like, and press **Save** or **Save and print slip** for a slip the person signs. Money from the drawer is taken off the expected cash on the Z-report.
+3. **See the month**: the Staff page shows each person's salary, advances taken this month, anything carried over from earlier months, and what is still to pay. Use the arrows to look at earlier months. **History** lists every advance and payment per month, and lets an admin remove an advance that was entered by mistake, as long as that month is not paid yet.
+4. **Pay the salary** at month end with **Pay salary**. The app proposes salary minus advances (plus or minus anything carried over); add a bonus or a cut with a reason if needed, choose cash or online, and press **Pay** or **Pay and print payslip**. A month can only be paid once; if less than the full amount is paid, the rest carries to next month, and if too much was advanced, the difference is deducted next month.
+
+Reports › Staff shows advances and salaries paid in any date range, and the Z-report prints a "Staff paid (cash)" line and a "By order taker" block.
+
+## 16. Updates
 
 The installed app checks GitHub for a new version shortly after starting and every few hours. When one exists, Settings › About shows **Download version X**; press it when the shop is quiet. Once downloaded, a small **Update ready** box appears; press **Restart now** or let it install at the next start.
 
-## 16. Keyboard shortcuts
+## 17. Keyboard shortcuts
 
 | Key              | Where          | Action                        |
 | ---------------- | -------------- | ----------------------------- |
@@ -226,7 +237,7 @@ The installed app checks GitHub for a new version shortly after starting and eve
 | Escape           | Any dialog     | Close                         |
 | Digits and Enter | Login          | Type the PIN                  |
 
-## 17. If something goes wrong
+## 18. If something goes wrong
 
 **Nothing prints on a Mac, or the Printers window shows the printer paused.** macOS pauses a printer after a failed send ("Unable to send data to printer"), for example when it was off or out of paper. The app's print message now says "paused by macOS" with the steps: check the printer is on with paper loaded, then open System Settings, Printers & Scanners, the printer, Open Print Queue and press Resume. Old jobs listed there can be deleted; receipts already printed are not sent again.
 
