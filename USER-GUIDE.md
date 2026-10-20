@@ -80,7 +80,9 @@ The Sales screen lists every sale with a search box, date range and status filte
 
 Admins add and edit products: name, barcode, SKU, category, cost, sale price, tax, unit, opening stock and low-stock level. The margin is shown as you type. Products can be marked inactive instead of deleted, so old sales keep their history.
 
-**Import from Excel or CSV**: "Import" opens a preview that maps columns, shows problems per row and creates or updates products in one go. Use "Download template" for the expected columns. Only name and sale_price are required. For a restaurant menu add a `track_stock` column with `no`, so dishes and deals sell without a stock count; leave it out or write `yes` for goods you count.
+**Deals**: tick "This is a deal" on a product that bundles several items, then list what it includes, one item per line with the quantity first (for example `2 Zinger burger`), or pick each item with "Add from products". Every kitchen slip prints the contents under the deal, multiplied by the quantity ordered, so the kitchen knows what to make. Receipts and bills show only the deal and its price. The register marks these products with a Deal badge and the cart shows the contents under the line.
+
+**Import from Excel or CSV**: "Import" opens a preview that maps columns, shows problems per row and creates or updates products in one go. Use "Download template" for the expected columns. Only name and sale_price are required. For a restaurant menu add a `track_stock` column with `no`, so dishes and deals sell without a stock count; leave it out or write `yes` for goods you count. For deals add an `is_deal` column with `yes` and a `contents` column that lists the items separated by `;` (for example `2 Zinger burger; 1 Fries`).
 
 ![Import](screenshots/20-import-dialog.png)
 
@@ -94,7 +96,7 @@ Record purchases, adjust counts and see the low-stock list. Every change, includ
 
 ![Customers](screenshots/24-customers.png)
 
-Add customers with a phone number and an optional credit limit. Only an admin can set or change the limit; cashiers can add customers, attach them to sales and receive payments. The customer page shows the balance, credit sales and payments. Click any sale in the Activity list to see what was bought, with quantities and line totals. "Receive credit payment" records money paid against the balance.
+Add customers with a phone number and an optional credit limit. Only an admin can set or change the limit; cashiers can add customers, attach them to sales and receive payments. The customer page shows the balance, credit sales and payments. Click any sale in the Activity list to see what was bought, with quantities and line totals, and press **Print receipt** there to hand the customer a copy. "Receive credit payment" records money paid against the balance.
 
 ## 10. Reports
 
