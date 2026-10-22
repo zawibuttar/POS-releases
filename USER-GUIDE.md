@@ -98,6 +98,8 @@ Record purchases, adjust counts and see the low-stock list. Every change, includ
 
 Add customers with a phone number and an optional credit limit. Only an admin can set or change the limit; cashiers can add customers, attach them to sales and receive payments. The customer page shows the balance, credit sales and payments. Click any sale in the Activity list to see what was bought, with quantities and line totals, and press **Print receipt** there to hand the customer a copy. "Receive credit payment" records money paid against the balance.
 
+**Print credit statement** prints the customer's udhaar account on the receipt printer. Choose **With items** (every credit sale with its products) or **Totals only** (one line per sale), and the period: unpaid only since the balance was last zero, this month, or everything. The statement shows each credit sale, payment and refund with a running balance, the totals, the balance owed in large type and a line for the customer's signature.
+
 ## 10. Reports
 
 ![Reports](screenshots/30-reports-summary.png)
