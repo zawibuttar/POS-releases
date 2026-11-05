@@ -222,11 +222,17 @@ The **Staff** page (admins only) keeps track of what each person is paid.
 
 Reports › Staff shows advances and salaries paid in any date range, and the Z-report prints a "Staff paid (cash)" line and a "By order taker" block.
 
-## 16. Updates
+## 16. Licence
+
+The app runs on a monthly licence code from Ibrar Ul Hassan, +92 344 3310252. A new install, or a shop updating to this version, runs free for 7 days. A yellow strip appears 7 days before the licence ends. After the end date you get 5 grace days with a red strip, then a lock screen appears before sign-in. Your data stays safe in `pos-data.xlsx` throughout.
+
+To enter a code, copy it from the WhatsApp message and paste it in Settings › About and updates › Enter licence code, on the strip, or on the lock screen. The app unlocks at once.
+
+## 17. Updates
 
 The installed app checks GitHub for a new version shortly after starting and every few hours. When one exists, Settings › About shows **Download version X**; press it when the shop is quiet. Once downloaded, a small **Update ready** box appears; press **Restart now** or let it install at the next start.
 
-## 17. Keyboard shortcuts
+## 18. Keyboard shortcuts
 
 | Key              | Where          | Action                        |
 | ---------------- | -------------- | ----------------------------- |
@@ -241,7 +247,7 @@ The installed app checks GitHub for a new version shortly after starting and eve
 | Escape           | Any dialog     | Close                         |
 | Digits and Enter | Login          | Type the PIN                  |
 
-## 18. If something goes wrong
+## 19. If something goes wrong
 
 **Nothing prints on a Mac, or the Printers window shows the printer paused.** macOS pauses a printer after a failed send ("Unable to send data to printer"), for example when it was off or out of paper. The app's print message now says "paused by macOS" with the steps: check the printer is on with paper loaded, then open System Settings, Printers & Scanners, the printer, Open Print Queue and press Resume. Old jobs listed there can be deleted; receipts already printed are not sent again.
 
