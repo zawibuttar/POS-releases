@@ -136,6 +136,8 @@ Below the list: header and footer lines and whether to print automatically after
 
 ![Users](screenshots/26-settings-users.png)
 
+**Delete user**: open **Edit** on a user and press **Delete user**. The confirm box shows anything still open for that person this month, such as an advance not yet taken off a salary or an unpaid salary, so you can settle it first. A deleted user disappears from the Users list, sign-in, the order taker list and the Staff page, but old sales, receipts, advances and payslips keep their name. You cannot delete your own account, and the shop always keeps one active admin. To bring someone back, add them again.
+
 Add cashiers, order takers and other staff, set roles, job titles and monthly salaries, reset PINs and deactivate people who leave. An **Order taker** has no PIN and cannot sign in; the cashier picks them on each sale. **Staff (no login)** is for the chef, dishwasher and anyone else paid through the Staff page (section 15). Cashiers cannot open Products, Inventory, Reports or Settings. The inactivity lock time is set here. A user shown as **No PIN** (for example after restoring a backup on a new computer) cannot sign in until you reset their PIN.
 
 ### Data file and backups
@@ -222,17 +224,25 @@ The **Staff** page (admins only) keeps track of what each person is paid.
 
 Reports › Staff shows advances and salaries paid in any date range, and the Z-report prints a "Staff paid (cash)" line and a "By order taker" block.
 
-## 16. Licence
+## 16. Rent
+
+If the shop is rented, an admin turns on **This shop is rented** in Settings › Shop and enters the landlord's name and the monthly rent. Shops that own their building leave it off, and nothing about rent appears.
+
+With it on, the **Rent** page shows one month at a time: the monthly rent, anything owed from before or paid ahead, what has been paid this month and what is still to pay. Press **Pay rent** each time the landlord takes money, in any amount (for example Rs 20,000 now and Rs 30,000 later). Choose the month it counts towards, the date, whether it came from the cash drawer or the owner's pocket, and add a note if you like. **Save and print slip** prints a slip with what is paid and what is left, for the landlord to sign. If more or less than the rent is paid, the difference carries to the next month.
+
+Money paid from the drawer comes off the expected cash on the Z-report. All rent counts in the net on Reports, and Reports › Rent lists every payment. A payment entered by mistake can be deleted from the Rent page.
+
+## 17. Licence
 
 The app runs on a monthly licence code from Ibrar Ul Hassan, +92 344 3310252. A new install, or a shop updating to this version, runs free for 7 days. A yellow strip appears 7 days before the licence ends. After the end date you get 5 grace days with a red strip, then a lock screen appears before sign-in. Your data stays safe in `pos-data.xlsx` throughout.
 
 To enter a code, copy it from the WhatsApp message and paste it in Settings › About and updates › Enter licence code, on the strip, or on the lock screen. The app unlocks at once.
 
-## 17. Updates
+## 18. Updates
 
 The installed app checks GitHub for a new version shortly after starting and every few hours. When one exists, Settings › About shows **Download version X**; press it when the shop is quiet. Once downloaded, a small **Update ready** box appears; press **Restart now** or let it install at the next start.
 
-## 18. Keyboard shortcuts
+## 19. Keyboard shortcuts
 
 | Key              | Where          | Action                        |
 | ---------------- | -------------- | ----------------------------- |
@@ -247,7 +257,7 @@ The installed app checks GitHub for a new version shortly after starting and eve
 | Escape           | Any dialog     | Close                         |
 | Digits and Enter | Login          | Type the PIN                  |
 
-## 19. If something goes wrong
+## 20. If something goes wrong
 
 **Nothing prints on a Mac, or the Printers window shows the printer paused.** macOS pauses a printer after a failed send ("Unable to send data to printer"), for example when it was off or out of paper. The app's print message now says "paused by macOS" with the steps: check the printer is on with paper loaded, then open System Settings, Printers & Scanners, the printer, Open Print Queue and press Resume. Old jobs listed there can be deleted; receipts already printed are not sent again.
 
